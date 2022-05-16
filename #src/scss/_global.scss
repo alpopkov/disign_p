@@ -8,6 +8,7 @@ body {
 	font-weight: 400px;
 	font-size: 16px;
 	line-height: 27px;
+	color: $default;
 }
 
 .wrapper {
@@ -19,17 +20,13 @@ body {
 .main {
 	flex: 1 0 auto;
 }
+
 .footer {
 	flex: 0 0 auto;
 }
 
-.container{
-  max-width: 1140px;
-  margin: 0 auto;
-  padding: 0 15px;
+.container {
+	max-width: 1140px;
+	margin: 0 auto;
+	padding: 0 15px;
 }
-
-
-
-
-

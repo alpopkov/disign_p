@@ -2,11 +2,13 @@
 	@font-face {
 		font-family: $font_name;
 		font-display: swap;
-		src: url("../fonts/#{$file_name}.woff2") format("woff2"), url("../fonts/#{$file_name}.woff") format("woff");
+		src: url("../fonts/#{$file_name}.woff2") format("woff2"),
+		url("../fonts/#{$file_name}.woff") format("woff");
 		font-weight: #{$weight};
 		font-style: #{$style};
 	}
 }
+
 @import 'fonts';
 @import 'vars';
 @import 'reset';
@@ -15,16 +17,17 @@
 
 .header {
 	&__inner {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	height: 120px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		height: 120px;
 	}
+
 	&__btn {
-  background-color: transparent;
-	border: none;
-	padding: 0;
-	cursor: pointer;
+		background-color: transparent;
+		border: none;
+		padding: 0;
+		cursor: pointer;
 	}
 }
 
@@ -32,18 +35,163 @@
 	margin: 0 auto;
 }
 
-.menu{
+.menu {
 	display: flex;
 	padding-right: 15px;
-	&__list{
+
+	&__list {
 		display: flex;
-		&-item{
-		padding-left: 15px;
-		padding-right: 15px;
+
+		&-item {
+			padding-left: 15px;
+			padding-right: 15px;
 		}
+
 		&-link {
 			@extend %title-font;
 			color: black;
 		}
+	}
+}
+
+.footer {
+	&__content {
+		background: #dfdfdf;
+		padding: 60px 0 80px;
+
+	}
+
+	&__inner {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__info {
+		width: 540px;
+	}
+
+	&__info-title {
+		color: $title;
+		@extend %title-font;
+		margin-bottom: 14px;
+		line-height: 23px;
+	}
+
+	&__info-text {
+		margin-bottom: 16px;
+		max-width: 475px;
+	}
+
+	&__info-email {
+		font-weight: 600;
+		font-style: 14px;
+		margin-bottom: 22px;
+		color: $title;
+		padding-left: 30px;
+		display: inline-block;
+		position: relative;
+
+		&::before {
+			content: '';
+			background-image: url(../img/mail2.svg);
+			left: 0;
+			top: 6px;
+			width: 16px;
+			height: 16px;
+			position: absolute;
+
+		}
+	}
+
+	&__form {
+		display: flex;
+	}
+
+	&__form-input {
+		padding: 6px 10px 6px 18px;
+		border-radius: 21px;
+		background-color: transparent;
+		opacity: 0.7;
+		border: 1px solid rgba($title, .7);
+		width: 100%;
+	}
+
+	&__form-button {
+		border: none;
+		background-color: $title;
+		color: #fffff0;
+		border-radius: 21px;
+		font-weight: 600;
+		padding: 6px 12px;
+		min-width: 160px;
+		cursor: pointer;
+	}
+
+	&__social {
+		width: 125px;
+		margin-right: auto;
+		margin-left: 100px;
+	}
+
+	&__social-link {
+		padding-left: 28px;
+		position: relative;
+
+		&::before {
+			content: '';
+			left: 0;
+			top: 2px;
+			width: 16px;
+			height: 16px;
+			position: absolute;
+		}
+	}
+
+	&__social-link--facebook::before {
+		background-image: url(../img/facebook2.svg);
+	}
+
+	&__social-link--instagram::before {
+		background-image: url(../img/instagram.svg);
+	}
+
+	&__social-link--pinterest::before {
+		background-image: url(../img/pinterest.svg);
+	}
+
+	&__social-link--whatsapp::before {
+		background-image: url(../img/whatsapp.svg);
+	}
+
+	&__social-link--youtube::before {
+		background-image: url(../img/youtube.svg);
+	}
+
+
+	&__social-item,
+	&__menu-item {
+		margin-bottom: 15px;
+		font-weight: 600;
+		font-size: 14px;
+		color: #707070;
+	}
+
+	&__social-link,
+	&__menu-link {
+		color: #707070;
+	}
+
+	&__menu {
+		margin-right: 60px;
+		width: 125px;
+	}
+
+
+
+	&__copyright {
+		background-color: $title;
+		color: #a1a1a1;
+		text-align: center;
+		padding: 42px 0px 41px;
 	}
 }
