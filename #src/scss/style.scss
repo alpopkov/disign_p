@@ -186,12 +186,49 @@
 		width: 125px;
 	}
 
-
-
 	&__copyright {
 		background-color: $title;
 		color: #a1a1a1;
 		text-align: center;
 		padding: 42px 0px 41px;
+	}
+}
+
+.rightside-menu {
+	position: absolute;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	min-width: 694px;
+	width: 100px;
+	background-color: white;
+	padding-top: 40px;
+	box-shadow: -2px 3px 17px 0px #000;
+
+	&__close {
+		background-color: transparent;
+		border: none;
+		padding: 0;
+		cursor: pointer;
+		margin-left: 50px;
+		margin-bottom: 60px;
+	}
+
+	&__content {
+		text-align: center;
+		max-width: 485px;
+		margin: 0 auto;
+	}
+
+	&__logo {
+		margin-bottom: 40px;
+		display: inline-block;
+	}
+
+	&__title {
+		color: $title;
+		@extend %title-font;
+		font-size: 36px;
+		line-height: 51px;
 	}
 }

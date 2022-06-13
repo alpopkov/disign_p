@@ -30,6 +30,7 @@
   font-style: normal;
 }
 
+.rightside-menu__title,
 .footer__info-title,
 .menu__list-link {
   font-family: "Montserrat", sans-serif;
@@ -319,4 +320,43 @@ body {
   color: #a1a1a1;
   text-align: center;
   padding: 42px 0px 41px;
+}
+
+.rightside-menu {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  min-width: 694px;
+  width: 100px;
+  background-color: white;
+  padding-top: 40px;
+  -webkit-box-shadow: -2px 3px 17px 0px #000;
+          box-shadow: -2px 3px 17px 0px #000;
+}
+
+.rightside-menu__close {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  margin-left: 50px;
+  margin-bottom: 60px;
+}
+
+.rightside-menu__content {
+  text-align: center;
+  max-width: 485px;
+  margin: 0 auto;
+}
+
+.rightside-menu__logo {
+  margin-bottom: 40px;
+  display: inline-block;
+}
+
+.rightside-menu__title {
+  color: #363838;
+  font-size: 36px;
+  line-height: 51px;
 }
