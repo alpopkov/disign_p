@@ -15,12 +15,29 @@
 @import 'libs';
 @import 'global';
 
+.overlay {
+
+	/* Скрываем подложку  */
+	opacity: 0;
+	visibility: hidden;
+
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, .5);
+	z-index: 20;
+	transition: .3s all;
+}
+
 .header {
 	&__inner {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		height: 120px;
+		height: 247px;
+		background-color: white;
 	}
 
 	&__btn {
@@ -195,11 +212,16 @@
 }
 
 .rightside-menu {
+	opacity: 0;
+	visibility: hidden;
 	position: absolute;
+	z-index: 30;
+	transition: 0.3s all;
+
 	right: 0;
 	top: 0;
 	bottom: 0;
-	min-width: 694px;
+	min-width: 400px;
 	width: 100px;
 	background-color: white;
 	padding-top: 40px;
@@ -231,4 +253,10 @@
 		font-size: 36px;
 		line-height: 51px;
 	}
+}
+
+.rightside-menu.active,
+.overlay.active {
+	opacity: 1;
+	visibility: visible;
 }
